@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>American Funding Loans</title>
+</head>
+<body>
+    <form>
+        <div class="row" id="login">
+            <div >
+                <h1>American Funding Loan Application</h1>
+            </div>
+
+            <img src="{{ url_for('static', filename='loan.jpg') }}" alt="bank loan image"/>
+
+            <a href="{{url_for('login')}}">LOGIN</a>
+        </div>
+    </form>
+</body>
+</html>

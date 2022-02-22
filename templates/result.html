@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>American Funding</title>
+</head>
+<body>
+    <form>
+        <div class="row" id="login">
+            <div >
+                <h1>Loan Application Result</h1>
+            </div>
+
+            <br/>
+            <br/>
+
+            <div>
+                {% if prediction == 1 %}
+
+                <h3>Congratulations, your loan is approved!!!</h3>
+                <img src="{{ url_for('static', filename='approved.jpg') }}"/>
+
+                {% else %}
+
+                <h3>I'm sorry but you are not eligible for a loan at this time.</h3>
+                <img src="{{ url_for('static', filename='denied.jpg') }}"/>
+
+                {% endif %}
+            </div>
+
+
+            <a href="{{url_for('apply')}}">Go Back to Application Page</a>
+        </div>
+    </form>
+</body>
+</html>

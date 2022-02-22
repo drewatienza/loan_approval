@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Loan Application</title>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>LOAN APPLICATION</h1>
+
+                <legend>Applicant Information</legend>
+                <br/>
+
+                <label>Gender:</label>
+                <input type="radio" id="Male" value="0" name="Gender"><label for="Male" class="light">Male</label><br>
+                <input type="radio" id="Female" value="1" name="Gender"><label for="Female" class="light">Female</label><br>
+                <br>
+
+                <label for="Married">Marital Status:</label>
+                <select id="Married" name="Married">
+                    <option value="0">Single</option>
+                    <option value="1">Married</option>
+                </select>
+
+                <label for="dependents">Number of Dependents:</label>
+                <select id="dependents" name="Dependents">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3 or more</option>
+                </select>
+
+                <label for="Education">Education Level:</label>
+                <select id="Education" name="Education">
+                    <option value="1">College Graduate</option>
+                    <option value="0">Not A College Graduate</option>
+                </select>
+
+                <label for="Self_Employed">Employment Status:</label>
+                <select id="Self_Employed" name="Self_Employed">
+                    <option value="0">Not self employed</option>
+                    <option value="1">Self employed</option>
+                </select>
+
+                <label for="ApplicantIncome">Current Monthly Income:</label>
+                <input type="number" id="ApplicantIncome" name="ApplicantIncome">
+
+                <label for="CoapplicantIncome">Co-Applicant Income (Put 0 if there is no co-applicant):</label>
+                <input type="number" id="CoapplicantIncome" name="CoapplicantIncome">
+
+                <label for="LoanAmount">Desired Loan Amount:</label>
+                <input type="number" id="LoanAmount" name="LoanAmount">
+
+                <label for="LoanTerm">Loan Term Length (in Months):</label>
+                <select id="LoanTerm" name="Loan_Amount_Term">
+                    <option value="0">Loan term</option>
+                    <option value="12">12 months</option>
+                    <option value="36">36 months</option>
+                    <option value="60">60 months</option>
+                    <option value="84">84 months</option>
+                    <option value="120">120 months</option>
+                    <option value="180">180 months</option>
+                    <option value="240">240 months</option>
+                    <option value="300">300 months</option>
+                    <option value="360">360 months</option>
+                    <option value="480">480 months</option>
+                </select>
+
+                <label for="Credit history">Credit history:</label>
+                <select id="credit history" name="Credit_History">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                <label>Geographical Area:</label>
+                <input type="radio" id="Semiurban" value="0" name="Property_Area"><label class="light" for="semiurban">Semiurban  </label>
+                <input type="radio" id="urban" value="1" name="Property_Area"><label class="light" for="urban">Urban  </label>
+                <input type="radio" id="rural" value="2" name="Property_Area"><label class="light" for="rural">Rural  </label>
+                <br>
+                <br>
+                <br>
+
+                <button type="submit">APPLY</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
