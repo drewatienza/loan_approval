@@ -3,6 +3,7 @@ argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 asttokens==2.0.5
 attrs==21.4.0
+autopep8==1.6.0
 backcall==0.2.0
 bcrypt==3.2.0
 black==22.1.0
@@ -16,11 +17,9 @@ defusedxml==0.7.1
 entrypoints==0.4
 executing==0.8.2
 Flask==2.0.3
-Flask-Bcrypt==0.7.1
-Flask-Login==0.5.0
-Flask-SQLAlchemy==2.5.1
 fonttools==4.29.1
 greenlet==1.1.2
+gunicorn==20.1.0
 importlib-resources==5.4.0
 ipykernel==6.9.0
 ipython==8.0.1
@@ -62,6 +61,7 @@ prometheus-client==0.13.1
 prompt-toolkit==3.0.27
 ptyprocess==0.7.0
 pure-eval==0.2.2
+pycodestyle==2.8.0
 pycparser==2.21
 Pygments==2.11.2
 pyparsing==3.0.7
@@ -76,11 +76,11 @@ scipy==1.8.0
 seaborn==0.11.2
 Send2Trash==1.8.0
 six==1.16.0
-SQLAlchemy==1.4.31
 stack-data==0.1.4
 terminado==0.13.1
 testpath==0.5.0
 threadpoolctl==3.1.0
+toml==0.10.2
 tomli==2.0.1
 tornado==6.1
 traitlets==5.1.1

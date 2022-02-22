@@ -2,6 +2,7 @@ from logging import debug
 from flask import Flask, render_template, request, session, redirect, url_for, g
 import utils
 from utils import preprocessdata
+import os
 
 
 class User:
@@ -43,7 +44,7 @@ def login():
         wrong_cred = "The email and/or password entered is not valid!  Please try again."
         for x in users:
             if x.email != email:
-                return render_template('login.html', wrong_credentials = wrong_cred)
+                return render_template('login.html', wrong_credentials=wrong_cred)
                 # return redirect(url_for('login'))
             user = [x for x in users if x.email == email][0]
 
@@ -84,5 +85,6 @@ def predict():
     return render_template('result.html', prediction=prediction)
 
 
+port = int(os.environ.get("PORT", 5000))
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
